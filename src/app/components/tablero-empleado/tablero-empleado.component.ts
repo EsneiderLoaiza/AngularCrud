@@ -57,4 +57,11 @@ export class TableroEmpleadoComponent implements OnInit {
     })
   }
 
+  deleteMaquina(valor : any) {
+    this.api.deleteMaquina(valor.id)
+    .subscribe(res=>{
+      alert("Maquina eliminada");
+    })
+  }
+
 }
