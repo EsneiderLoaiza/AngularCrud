@@ -1,0 +1,83 @@
+<nav class="navbar navber-light bg-primary">
+    <div class="container-fluid">
+        <h1>Crud con Angular y JSON server fake</h1>
+        <div class="d-flex">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success" >Agregar maquina</button>
+        </div>
+    </div>
+</nav>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">ID maquina</th>
+            <th scope="col">Nombre de maquina</th>
+            <th scope="col">Número de serie</th>
+            <th scope="col">Casino donde se deja</th>
+            <th scope="col">Dirección casino</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let valor of maquinaData">
+            <td>{{valor.id}}</td>
+            <td>{{valor.nombreMaquina}}</td>
+            <td>{{valor.numeroSerie}}</td>
+            <td>{{valor.casinoDondeSeDeja}}</td>
+            <td>{{valor.direccion}}</td>
+            <td>{{valor.fecha}}</td>
+            <td>
+                <button class="btn btn-info">Editar</button>
+                <button class="btn btn-danger mx-3">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar maquina</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <form [formGroup]="formulario" >
+                <div class="form-group mt-3">
+                  <label for="exampleInputEmail1">Nombre de maquina</label>
+                  <input type="text" formControlName="nombreMaquina" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                </div>
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1">Número de serie</label>
+                    <input type="text" formControlName="numeroSerie" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="exampleInputEmail1">Casino donde se deja</label>
+                    <input type="text" formControlName="casinoDondeSeDeja" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="exampleInputEmail1">Dirección casino</label>
+                    <input type="text" formControlName="direccion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  </div>
+                <div class="form-group mt-3">
+                  <label for="exampleInputPassword1">Fecha</label>
+                  <input type="text" formControlName="fecha" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </form>
+
+        </div>
+        <div class="modal-footer mt-3">
+          <button type="button" id="cancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" (click)="postMaquinaDetails()" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
