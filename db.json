@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "nombreMaquina": "Ruta",
+      "numeroSerie": "123456",
+      "casinoDondeSeDeja": "Casino Fluor",
+      "direccion": "Calle 19 # 10-10",
+      "fecha": "19-09-2021"
+    },
+    {
+      "id": 3,
+      "nombreMaquina": "Ruleta",
+      "numeroSerie": "654321",
+      "casinoDondeSeDeja": "Casino trebol",
+      "direccion": "Carrera 11",
+      "fecha": "21-09-2021"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
