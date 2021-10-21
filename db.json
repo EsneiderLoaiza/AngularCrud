@@ -1,11 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
       "id": 2,
       "nombreMaquina": "Ruta",
       "numeroSerie": "123456",
@@ -20,15 +15,17 @@
       "casinoDondeSeDeja": "Casino trebol",
       "direccion": "Carrera 11",
       "fecha": "21-09-2021"
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 4,
+      "nombreMaquina": "Cabitech",
+      "numeroSerie": "654789",
+      "casinoDondeSeDeja": "Casino Millonario",
+      "direccion": "Carrera 21",
+      "fecha": "25-09-2021"
     }
   ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
