@@ -29,7 +29,7 @@
             <td>{{valor.fecha}}</td>
             <td>
                 <button class="btn btn-info">Editar</button>
-                <button class="btn btn-danger mx-3">Eliminar</button>
+                <button (click)="deleteMaquina(valor)" class="btn btn-danger mx-3">Eliminar</button>
             </td>
         </tr>
     </tbody>
