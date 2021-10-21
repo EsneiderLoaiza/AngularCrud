@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <h1>Crud con Angular y JSON server fake</h1>
         <div class="d-flex">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success" >Agregar maquina</button>
+            <button (click)="clickAgregarMaquina()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success" >Agregar maquina</button>
         </div>
     </div>
 </nav>
@@ -28,7 +28,7 @@
             <td>{{valor.direccion}}</td>
             <td>{{valor.fecha}}</td>
             <td>
-                <button class="btn btn-info">Editar</button>
+                <button (click)="editMaquina(valor)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Editar</button>
                 <button (click)="deleteMaquina(valor)" class="btn btn-danger mx-3">Eliminar</button>
             </td>
         </tr>
@@ -74,7 +74,8 @@
         </div>
         <div class="modal-footer mt-3">
           <button type="button" id="cancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" (click)="postMaquinaDetails()" class="btn btn-primary">Agregar</button>
+          <button type="button" *ngIf="mostrarBotonAgregar" (click)="postMaquinaDetails()" class="btn btn-success">Agregar</button>
+          <button type="button" *ngIf="mostrarBotonActualizar" (click)="updateMaquina()" class="btn btn-primary">Actualizar</button>
         </div>
       </div>
     </div>
