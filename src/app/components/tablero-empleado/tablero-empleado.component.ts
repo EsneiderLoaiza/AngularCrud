@@ -30,6 +30,9 @@ export class TableroEmpleadoComponent implements OnInit {
   }
 
   postMaquinaDetails() {
+    this.mostrarBotonAgregar = true;
+    this.mostrarBotonActualizar = false;
+
     this.maquinaModelObj.nombreMaquina = this.formulario.value.nombreMaquina;
     this.maquinaModelObj.numeroSerie = this.formulario.value.numeroSerie;
     this.maquinaModelObj.casinoDondeSeDeja = this.formulario.value.casinoDondeSeDeja;
